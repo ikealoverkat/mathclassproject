@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="styles.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+	<title>IKEA Sharks</title>
+	<script>
+		function sayHi(){
+			let text;
+			var SN = document.getElementById("sharkname").value;
+			confirm("you want to name your shark "+SN+". Is this correct?");
+			if (confirm("you want to name your shark "+SN+". Is this correct?") == true) {
+				text = "Your IKEA shark's name is "+SN+". Buy it by clicking one of the sharks below!";
+			}
+			document.getElementById("popup").innerHTML = text;
+		}
+		function addTogether(){
+			var bigsharknumber = 40*document.getElementById("bigsharknumber").value;
+			var littlesharknumber = 20*document.getElementById("littlesharknumber").value;
+			var sum = bigsharknumber+littlesharknumber;
+			alert("these sharks are worth "+sum+" dollars!")
+		}
+
+// When the user clicks anywhere outside of the modal, close it		
+	</script>
+	<!--website fade in-->
+	<style>
+		@keyframes fadeIn {
+			0% {opacity:0};
+			100% {opacity:1};
+		}
+		body {
+			background-position: top left;
+			animation-timing-function: linear;
+			animation: fadeIn 2s, bgmove 60s infinite;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+		@keyframes bgmove {
+			0% {background-position: top left;}
+			100% {background-position: bottom right;}
+		}
+	</style>
+</style>
+	<!--scrollbar-->
+	<style>
+	/* width */
+	::-webkit-scrollbar {
+  	width: 20px;
+	}
+
+	/* Track */	
+	::-webkit-scrollbar-track {
+	background: white;
+  	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  	border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+  	background: #8adcf9;
+  	border-radius: 10px;	
+	}
+	</style>
+	<!--style1-->
+	<style>
+		body {	
+			font-family: "Quicksand", sans-serif;
+			background: #EAF9FB;
+			color: #4A7A94;
+			background-image: url(plaid_bg.jpg);
+		}
+		/*rainbow*/
+		@keyframes rainbow {
+			0% {color: #e35050}
+			10%{color: #ff7919} 
+			20%{color: #ffe121}
+			30%{color: #65f13f}
+			40%{color: #437beb}
+			50%{color: rgb(129, 62, 202)}
+			60%{color: #d1519c}
+			70%{color:#ff7919}
+			80%{color: #ffe121}
+			100%{color:#4A7A94}
+		}
+		h1 {
+			margin: 1px;
+			color: #4A7A94;
+			animation-name: rainbow;
+			animation-duration: 2s;
+			font-size: 50px;
+		}
+		/*font*/
+		input {
+			font-family:"Quicksand", sans-serif;
+		}
+		/*submit button styling*/
+		input[type=button] {
+			background-color: #4A7A94;
+			border: 4px solid #ACCFD3;
+			color: white;
+			padding: 10px 14px;
+			text-align: center;
+			display: inline-block;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 14px;
+			transition-duration: 0.25s;	
+			box-shadow: 0 4px 4px 0 rgba(0,0,0,0.8);
+		}
+		input[type=button]:hover {
+			background-color: white;
+			color:#4A7A94;
+			transform: scale(1.15, 1.15);
+		}
+		input[type=button]:active {
+			background-color: white;
+			box-shadow: 0 7px rgba(0,0,0,0.5);
+			transform: translateY(7px);
+			transform: scale(0.8,0.8);
+		}
+		/*shark-naming field*/
+		input[type=text] {
+			padding: 12px 14px;
+			margin: 8px 0;
+			box-sizing: border-box;	
+			color: #4A7A94;
+			border: 4px solid #cde3e5;
+			border-radius: 14px; 
+			box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+		}
+		/*link/anchor styling*/
+		a {
+			color:#43a7cb;
+		}
+		/*shark pick hover*/
+		img{
+			transition-duration:0.25s;
+		}
+		img:hover {
+			transform: scale(1.15, 1.15);
+			opacity: 80%;
+		}
+		img:active {
+			transform: scale(0.8, 0.8);
+			opacity: 65%;
+		}
+		h2[id="sectioncalc"]{
+			color:#43a7cb;
+		}
+	</style>
+	<!--lines and shark gallery-->
+	<style>
+		hr {
+			border-top: 7px dotted rgba(74,122,148, 0.5);
+		}
+		img[src="gameshark.webp"] {
+			margin-left: 0%;
+			margin-right: 50%;
+			margin-top: -5%;
+			margin-bottom: 2%;
+			border-radius: 45px;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.6); 
+		}
+		h3[id="gameshark_comment"]{
+			float:right;
+			transform: translate(-400px,0px);
+		}
+		img[id="capitalishark"]{
+			transform: translate(350px,-200px);
+			border-radius: 45px;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.6); 
+		}
+		h3[id="capitalishark_comment"]{
+			transform: translate(60px,-440px);
+		}
+		h3[id="capitalishark_comment_2"]{
+			transform: translate(80px,-460px);
+		}
+		img[src="shoppingcart.jpg"]{
+			transform: translate(-200px, -250px);
+			border-radius: 45px;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+			margin-bottom:-30%;
+		}
+		h3[id=shoppingcart_comment]{
+			transform: translate(150px, -270px);
+		}
+		input[type=button][id="scroll"]{
+			border-radius: 25%;
+			font-size:100px;
+			font-weight:bold;
+			padding: 32px 64px;
+			transform:translate(300px, -150px);
+		}
+	</style>
+	<!--backtotop button-->
+	<style>
+		input [id="backtotop"]{
+			padding: 32px 64px;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<!--history section-->
+		<!--title-->
+		<h1 id="start">ikea sharks</h1>
+		<h2 style="color:#43a7cb">the history of the ikea shark</h2>
+		<p>The <b>IKEA shark</b>, or <b>Blahaj</b>, is a staple in IKEA stores around the world. However, did you know that the Blahaj has a long history? The roots of the shark trace back to
+		 2006, when IKEA created its first ever plush shark, the Korall Fisk. The Korall Fisk 
+		 was discontinued in 2008, and replaced with the Grossby, a grey shark that looks similar 
+		 to Blahaj. However, the Grossby has a different fur texture. Around 2010, the Grossby
+		  evolved into the Klapper Haj, which is the most similar to Blahaj. The only difference 
+		  between the Blahaj and the Klapper Haj is the color. Finally, IKEA released the Blahaj 
+		  in 2014. A smaller, baby version of the Blahaj is also available as of now.</p>
+	
+		<p style="color:#43a7cb"><em>2006-2008&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2008-2010&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2010-2014&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2014-now</em></p>
+		<div class="fade-in-image">
+		<a href="#galleryscroll"><img src="korall-fisk.png"alt="korall fisk" width="200"height="200"></img></a>
+		<a href="#galleryscroll"><img src="grossby.png"alt="grossby" width="200"height="200"></img></a>
+		<a href="#galleryscroll"><img src="klapper-haj.png"alt="klapper-haj" width="200"height="200"></img></a>
+		<a href="#galleryscroll"><img src="ikea_shark_big.png"alt="blahaj" width="200"height="200"></img></a>
+		</div>
+
+		<hr>
+
+	<!--silly shark gallery-->
+		<h2 style="color:#43a7cb;" id="galleryscroll">the silly IKEA shark gallery</h2>
+		<!--gameshark picture-->
+		<h3 id="gameshark_comment">IKEA shark plays games with his friends</h3>
+		<a href="https://www.ikea.com/ca/en/p/blahaj-soft-toy-shark-90373590/" target="_blank"><img src="gameshark.webp" alt="ikea sharks playing on nintendo switches" width="300" height="300" id="gameshark"></a>
+		<!--ikeasharkgetsajob-->
+		<a href="https://www.ikea.com/ca/en/p/blahaj-soft-toy-shark-90373590/" target="_blank"><img src="capitalishark.webp" alt="ikea shark in a business suit" width="375" height="225" id="capitalishark"></a>
+		<h3 id="capitalishark_comment">IKEA shark gets a job</h3>
+		<h3 id="capitalishark_comment_2">he also gets rich</h3>
+		<!--ikeashark goes shopping-->
+		<a href="https://www.ikea.com/ca/en/p/blahaj-soft-toy-shark-90373590/" target="_blank"><img src="shoppingcart.jpg" alt="ikea shark in a shopping cart" width="400" height="400"></a>
+		<h3 id="shoppingcart_comment">IKEA shark goes shopping</h3>
+		<!--scroll button-->
+		<a href="#picking"><input type="button" id="scroll" value="↓"></a>
+		<hr id="picking">
+
+	<!--picking section-->
+		<a href="#sectioncalc"><h2 id="popup" class="fade-in-image" style="color:#8adcf9;"></h2></a>
+		<!--text + ikea shark-->
+		<h2>pick an ikea shark</h2>
+		<a href="https://www.ikea.com/ca/en/p/blahaj-soft-toy-shark-90373590/"><img src="ikea_shark_big.png" alt="39inch ikea shark" width="400" height="400"></a>
+		<!--small ikea shark-->
+		<a href="https://www.ikea.com/ca/en/p/blahaj-soft-toy-baby-shark-70540665/"><img src="ikea_shark.png" alt="baby ikea shark" width="400" height="400"></a>
+		<!--button + text box-->
+		<form>	
+		<div><input type="text" id="sharkname" name="sharkname" value="name your shark!">
+		<input type="button" onclick="sayHi()"value="Submit!">
+		</form>
+	
+	<hr>
+
+	<!--ikea shark price calculator-->
+	<h2 id="sectioncalc">IKEA shark price calculator!</h2>
+	<img src="ikea_shark_big.png" width="200" height="200" class="calcshark">
+	<img src="ikea_shark.png" width="200" height="200" class="calcshark"> 
+	<form>
+		<input type="text" id="bigsharknumber">
+		+
+		<input type="text" id="littlesharknumber">
+		<h3># of big sharks&emsp;&emsp;&emsp;# of baby sharks</h3>
+		<div>
+		<input type="button" value="calculate!" id="calculate" onclick="addTogether()">
+	</form>
+	<!--back to start-->
+	<a href="#start"><input type="button" value = "back to top" id="backtotop"></a>
+</center>
+</body>
+</html>
